@@ -93,7 +93,7 @@ warner.save
 
 first = Movie.new
 first["title"] = "Batman Begins"
-first["year_released"] = "2005"
+first["year_released"] = 2005
 first["rated"] = "PG-13"
 warner = Studio.find_by({"name" => "Warner Bros."})
 first["studio_id"] = warner["id"]
@@ -101,7 +101,7 @@ first.save
 
 second = Movie.new
 second["title"] = "The Dark Knight"
-second["year_released"] = "2008"
+second["year_released"] = 2008
 second["rated"] = "PG-13"
 warner = Studio.find_by({"name" => "Warner Bros."})
 second["studio_id"] = warner["id"]
@@ -109,12 +109,14 @@ second.save
 
 third = Movie.new
 third["title"] = "The Dark Knight Rises"
-third["year_released"] = "2012"
+third["year_released"] = 2012
 third["rated"] = "PG-13"
 warner = Studio.find_by({"name" => "Warner Bros."})
 third["studio_id"] = warner["id"]
 third.save
 # puts "there are #{Movie.all.count} companies"
+# try = Movie.find_by({"year_released" => 2012})
+# puts try.inspect
 
 
 # Prints a header for the movies output
