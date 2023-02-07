@@ -118,6 +118,51 @@ third.save
 # try = Movie.find_by({"year_released" => 2012})
 # puts try.inspect
 
+christian = Actor.new
+christian["name"] = "Christian Bale"
+christian.save
+
+michael = Actor.new
+michael["name"] = "Michael Caine"
+michael.save
+
+liam = Actor.new
+liam["name"] = "Liam Neeson"
+liam.save
+
+katie = Actor.new
+katie["name"] = "Katie Holmes"
+katie.save
+
+gary = Actor.new
+gary["name"] = "Gary Oldman"
+gary.save
+
+heath = Actor.new
+heath["name"] = "Heath Ledger"
+heath.save
+
+aaron = Actor.new
+aaron["name"] = "Aaron Eckhart"
+aaron.save
+
+maggie = Actor.new
+maggie["name"] = "Maggie Gyllenhaal"
+maggie.save
+
+tom = Actor.new
+tom["name"] = "Tom Hardy"
+tom.save
+
+joseph = Actor.new
+joseph["name"] = "Joseph Gordon-Levitt"
+joseph.save
+
+anne = Actor.new
+anne["name"] = "Anne Hathaway"
+anne.save
+# try = Actor.all.count
+# puts try 
 
 # Prints a header for the movies output
 puts "Movies"
