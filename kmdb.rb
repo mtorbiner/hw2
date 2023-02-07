@@ -66,6 +66,7 @@
 # The Dark Knight Rises  Tom Hardy             Bane
 # The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
 # The Dark Knight Rises  Anne Hathaway         Selina Kyle
+puts "hello"
 
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
