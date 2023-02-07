@@ -164,6 +164,102 @@ anne.save
 # try = Actor.all.count
 # puts try 
 
+bruce = Role.new
+bruce["character_name"] = "Bruce Wayne"
+movie_first = Movie.find_by({"title" => "Batman Begins"})
+bruce["movie_id"] = movie_first["id"]
+bruce["actor_id"] = christian["id"]
+bruce.save
+
+bruce = Role.new
+bruce["character_name"] = "Bruce Wayne"
+movie_second = Movie.find_by({"title" => "The Dark Knight"})
+bruce["movie_id"] = movie_second["id"]
+bruce["actor_id"] = christian["id"]
+bruce.save
+
+bruce = Role.new
+bruce["character_name"] = "Bruce Wayne"
+movie_third = Movie.find_by({"title" => "The Dark Knight Rises"})
+bruce["movie_id"] = movie_third["id"]
+bruce["actor_id"] = christian["id"]
+bruce.save
+
+alfred = Role.new
+alfred["character_name"] = "Alfred"
+alfred["movie_id"] = movie_first["id"]
+alfred["actor_id"] = michael["id"]
+alfred.save
+
+alfred = Role.new
+alfred["character_name"] = "Alfred"
+alfred["movie_id"] = movie_second["id"]
+alfred["actor_id"] = michael["id"]
+alfred.save
+
+ra = Role.new
+ra["character_name"] = "Ra's Al Ghul"
+ra["movie_id"] = movie_first["id"]
+ra["actor_id"] = liam["id"]
+ra.save
+
+rachel = Role.new
+rachel["character_name"] = "Rachel Dawes"
+rachel["movie_id"] = movie_first["id"]
+rachel["actor_id"] = katie["id"]
+rachel.save
+
+rachel = Role.new
+rachel["character_name"] = "Rachel Dawes"
+rachel ["movie_id"] = movie_second["id"]
+rachel["actor_id"] = maggie["id"]
+rachel.save
+
+commissioner = Role.new
+commissioner["character_name"] = "Commissioner Gordon"
+commissioner["movie_id"] = movie_first["id"]
+commissioner["actor_id"] = gary["id"]
+commissioner.save
+
+commissioner = Role.new
+commissioner["character_name"] = "Commissioner Gordon"
+commissioner["movie_id"] = movie_third["id"]
+commissioner["actor_id"] = gary["id"]
+commissioner.save
+
+joker = Role.new
+joker["character_name"] = "Joker"
+joker["movie_id"] = movie_second["id"]
+joker["actor_id"] = heath["id"]
+joker.save
+
+harvey = Role.new
+harvey["character_name"] = "Harvey Dent"
+harvey["movie_id"] = movie_second["id"]
+harvey["actor_id"] = aaron["id"]
+harvey.save
+
+bane = Role.new
+bane["character_name"] = "Bane"
+bane["movie_id"] = movie_third["id"]
+bane["actor_id"] = tom["id"]
+bane.save
+
+john = Role.new
+john["character_name"] = "John Blake"
+john["movie_id"] = movie_third["id"]
+john["actor_id"] = joseph["id"]
+john.save
+
+selina = Role.new
+selina["character_name"] = "Selina Kyle"
+selina["movie_id"] = movie_third["id"]
+selina["actor_id"] = anne["id"]
+selina.save
+
+try = Role.all.count
+puts try
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
