@@ -257,8 +257,8 @@ selina["movie_id"] = movie_third["id"]
 selina["actor_id"] = anne["id"]
 selina.save
 
-try = Role.all.count
-puts try
+# try = Role.all.count
+# puts try
 
 # Prints a header for the movies output
 puts "Movies"
@@ -268,6 +268,21 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
+movies = Movie.all
+for movie in movies
+    title = movie["title"]
+    year = movie["year_released"]
+    rating = movie["rated"]
+    studio = Studio.find_by({"id" => movie["studio_id"]})
+    nstudio = studio["name"]
+    puts "#{title}     #{year}     #{rating}    #{nstudio}"
+end 
+
+# movie = Movie.find_by({"title" => "Batman Begins"})
+# str = Studio.find_by({"name" => "Warner Bros."})
+# puts movie.inspect
+# puts str.inspect
+
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
@@ -276,3 +291,12 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+for movie in movies
+    roles = Role.where({"movie_id" => movie["id"]})
+    for role in roles
+        actor_name = Actor.find_by({"id" => role["actor_id"]})
+        character = role["character_name"]
+        puts "#{movie["title"]}    #{actor_name["name"]}     #{character}"
+    end
+end
